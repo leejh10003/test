@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - ASP.NET 시범 어플리케이션</title>
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" />
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="/">대문</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <address>
+            @if (@Model != null)
+            {
+                @Model.Address
+            }
+        </address>
+        <footer>
+            <p>&copy; @DateTime.Now.Year - ASP.NET 시범 어플리케이션 Editted by LeeJunHyuk</p>
+            <p>방문시간: @DateTime.Now.Year - @DateTime.Now.Hour : @DateTime.Now.Minute : @DateTime.Now.Second</p>
+        </footer>
+    </div>
+</body>
+</html>

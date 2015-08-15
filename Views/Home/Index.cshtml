@@ -1,0 +1,16 @@
+﻿@using MvcSample.Web.Models
+@model User
+@{
+    Layout = "/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = "대문";
+    string helloClass = null;
+}
+
+<div class="jumbotron">
+    <h1>ASP.NET</h1>
+    <p class="lead">ASP.NET은 HTML, CSS, 자바스크립트를 사용해 훌륭한 웹 사이트와 웹 어플리케이션을 만들 수 있는 무료 웹 프레임워크입니다.</p>
+    <p><a href="http://asp.net" class="btn btn-primary btn-large">더 배워보기... &raquo;</a></p>
+</div>
+<div class="row">
+    <h3 title="@Model.Name" class="@helloClass">Hello @Model.Name!</h3>
+</div>
